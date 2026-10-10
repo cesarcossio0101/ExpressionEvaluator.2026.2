@@ -101,7 +101,10 @@ namespace Frontend.Windows
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            txtDisplay.Text = txtDisplay.Text.Substring(0, txtDisplay.Text.Length - 1);
+            if (txtDisplay.Text.Length > 0)
+            {
+                txtDisplay.Text = txtDisplay.Text.Substring(0, txtDisplay.Text.Length - 1);
+            }    
         }
 
         private void btnClear_Click(object sender, EventArgs e)
